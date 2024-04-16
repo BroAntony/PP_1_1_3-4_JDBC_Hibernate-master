@@ -2,6 +2,7 @@ package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.service.UserServiceImpl;
+import jm.task.core.jdbc.util.Util;
 
 
 public class Main {
@@ -9,12 +10,12 @@ public class Main {
         UserServiceImpl userService  = new UserServiceImpl();
 
 //        userService.createUsersTable();
-//        userService.cleanUsersTable();
+//        userService.removeUserById(1);
 //        userService.saveUser("Антон", "Албычев", (byte) 48);
-//        userService.saveUser("Андрей", "Пеннер", (byte) 48);
-//        userService.saveUser("Миша", "Сувернев", (byte) 48);
-//        userService.getAllUsers();
-//        userService.removeUserById(5);
 //        userService.dropUsersTable();
+//        userService.cleanUsersTable();
+//        userService.getAllUsers();
+
+        Util.closeSessionFactory();
     }
 }

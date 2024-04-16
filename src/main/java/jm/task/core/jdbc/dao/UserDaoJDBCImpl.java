@@ -15,7 +15,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     }
 
-    private Connection connection = Util.getConnectionDB();
+    private final Connection connection = Util.getConnectionDB();
 
     public void createUsersTable() {
         String sql = "CREATE TABLE IF NOT EXISTS USERS (" +
